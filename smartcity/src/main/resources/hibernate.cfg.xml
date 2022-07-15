@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <property name="hibernate.connection.url">jdbc:mysql://jutter.online:3306/winterdb?useSSL=false&amp;useUnicode=true&amp;allowPublicKeyRetrieval=true</property>
+        <property name="hibernate.connection.username">smart_rest</property>
+        <property name="hibernate.connection.password">299792458</property>
+        <property name="hibernate.connection.pool_size">10000</property>
+        <property name="hibernate.connection.">10000</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Entity Mapping -->
+        <mapping class="online.jutter.smartcity.data.db.ent.NewsEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.StreamEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.UserEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.SportEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.PlaceEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.CompetitionEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.TeamsEntity"/>
+        <mapping class="online.jutter.smartcity.data.db.ent.TeamCompetitionEntity"/>
+
+    </session-factory>
+</hibernate-configuration>
